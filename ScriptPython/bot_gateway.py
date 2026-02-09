@@ -7,11 +7,11 @@ import speech_recognition as sr
 
 
 # --- CONFIGURATION ---
-TOKEN = "8202841278:AAGNKB30nbk9k3Aa9G9EEUkhA8ASQg1RYzc"
-ADAFRUIT_USER = "justekc24io"
-ADAFRUIT_KEY = "aio_ZrLa85XNqrq3pwM4SyeHf2cOeXSL"
+TOKEN = "a renseigner"
+ADAFRUIT_USER = "ton username"
+ADAFRUIT_KEY = "à renseigner"
 FEED_NAME = "telegramcommand"
-MY_CHAT_ID = 6988460478
+MY_CHAT_ID = 7808560440
 
 # --- FONCTION D'ENVOI VERS ADAFRUIT (HTTPS) ---
 def send_to_adafruit(valeur):
