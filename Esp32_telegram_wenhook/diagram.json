@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Juste Kocou",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": -129.56, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 73.2,
+      "left": 138.2,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 77, "left": 0, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:4", "relay1:IN", "green", [ "h0" ] ],
+    [ "relay1:GND", "esp:GND.2", "gray", [ "h-19.2", "v-106" ] ],
+    [ "relay1:VCC", "relay1:COM", "red", [ "h0", "v-28.8", "h144", "v38.4" ] ],
+    [ "esp:5V", "relay1:VCC", "red", [ "h-19.05", "v-211.2", "h144", "v115.2" ] ],
+    [ "led1:C", "relay1:GND", "gray", [ "v48", "h-182.4", "v-57.6" ] ],
+    [ "relay1:NO", "led1:A", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
